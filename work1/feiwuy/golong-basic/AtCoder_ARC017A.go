@@ -2,13 +2,11 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 func isPrime(N int) bool {
 	ans := true
-	sqrt := int(math.Sqrt(float64(N))) + 1
-		for i := 2; i < sqrt; i++ {
+		for i := 2; i*i < N; i++ {
 			if N%i == 0 {
 				ans = false
 			}
